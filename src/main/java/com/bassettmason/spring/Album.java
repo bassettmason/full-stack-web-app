@@ -1,6 +1,7 @@
 package com.bassettmason.spring;
 
 import javax.persistence.*;
+import java.net.URL;
 
 @Entity
 public class Album {
@@ -11,15 +12,12 @@ public class Album {
     String artist;
     int songCount;
     int length;
-    String imageURL;
+    URL imageURL;
 
-    
-    @ManyToOne
-    public Location location;
 
     public Album() {}
 
-    public Album(String title,String artist, int songCount, int length, String imageURL) {
+    public Album(String title,String artist, int songCount, int length, URL imageURL) {
         this.title = title;
         this.artist = artist;
         this.songCount = songCount;
