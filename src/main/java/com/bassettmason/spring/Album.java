@@ -2,6 +2,7 @@ package com.bassettmason.spring;
 
 import javax.persistence.*;
 import java.net.URL;
+import java.util.List;
 
 @Entity
 public class Album {
@@ -13,6 +14,9 @@ public class Album {
     int songCount;
     int length;
     URL imageURL;
+
+    @OneToMany(mappedBy="album")
+    public List<Song> songs;
 
 
     public Album() {}
